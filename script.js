@@ -12,13 +12,21 @@ reversedStr(food)
 
 // Write a function that takes in the following array and consoles the target if it is found else
 // null
-// let num = [2,8,0,23,5,45,76]
-// Target = 23
+let num = [2,8,0,23,5,45,76]
+let Target = 23
 
-// const findTaget = function(arrayNums, target){
-  
-//     if(target )
-// }
+const findTaget = function(arrayNums, target){
+  for(const num of arrayNums){
+    if(num === target){
+        return target
+    }
+    else {
+        return null
+    }
+
+  }
+}
+console.log(findTaget(num,Target))
 
 // Given years between 2000 and 2023, console all the leap years in the following
 // sentence, i.e “2020 is a leap year” if not console log i.e “2001 is not a leap year”
@@ -30,14 +38,24 @@ year / 400 === 0 isLeap
 */
 // years = [2000,2001,2003,2004,2006,2000]
 const findsLeapYear = (years) => {
-    for(let year of years){
-        if(year / 4 === 0  && year / 400 === 0 && year / 100 === 0){
-            console.log(`${year} is a leap year`)
+    years.forEach(element => {
+        if( element / 4 === 0  && element / 400 === 0 && element / 100 !== 0){
+            console.log(`${element} is a leap year`)
         }
         else{
-            console.log(`${year} is not a leap year`)
+            console.log(`${element} is not a leap year`)
         }
-    }
+    });
+
+
+    // for(let year of years){
+    //     if(year / 4 === 0  && year / 400 === 0 && year / 100 === 0){
+    //         console.log(`${year} is a leap year`)
+    //     }
+    //     else{
+    //         console.log(`${year} is not a leap year`)
+    //     }
+    // }
 
 }
 
