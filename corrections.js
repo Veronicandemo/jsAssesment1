@@ -47,6 +47,17 @@ for(let num = 0; num <= 100; num++){
     else if(num % 5 === 0) console.log(`${num} Buzz`)
     else console.log(`${num}`)
 }
+//5. Write a function that takes in an array of numbers and returns an array that has all
+// elements multiplied by 4.
+const multiplication = (numArrs) => {
+    let prodArr = []
+    for(let num = 0; num < numArrs.length; num++){
+        prodArr.push(numArrs[num] * 4)
+    }
+    return prodArr
+}
+let numArray = [12,87,45,75,23,64,73]
+console.log(multiplication(numArray))
 // 6. Write a function that takes in an array of strings and returns an array with every element
 // turned into a number
 
